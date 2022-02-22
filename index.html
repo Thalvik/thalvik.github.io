@@ -1,1 +1,195 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DragJS - An JavaScript library for Drag/Drop/Switch/Locked items ordering</title>
+
+    <style>
+        .container {
+            display: flex;
+            margin: 0 auto;
+            max-width: 1320px;
+            flex-wrap: wrap;
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            min-width: 200px;
+            min-height: 200px;
+            background-color: gray;
+            margin: 10px;
+            line-height: 200px;
+            text-align: center;
+            padding: 20px;
+        }
+        .item img {
+            line-height: 12px;
+        }
+        .item h5 {
+            line-height: 2rem;
+            font-size: 2rem;
+            font-weight: normal;
+            margin: 0;
+            overflow-wrap: break-word;
+            inline-size: 200px;
+        }
+        .item p {
+            line-height: 1rem;
+            font-size: 1rem;
+            font-weight: normal;
+            margin: 0;
+            overflow-wrap: break-word;
+            inline-size: 200px;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .locked {
+            background-color: red;
+        }
+        .action-lock {
+            line-height: 0;
+        }
+    </style>
+    <script src="https://raw.githubusercontent.com/Thalvik/DragJS/master/src/index.js"></script>
+    <script>
+        new DragJS({
+            elementsToSwitch : ['img', 'h5', 'p'],
+            dragItemClass : 'item',
+            draggableClass : 'draggable',
+            lockedClass : 'locked',
+            overClass : 'over',
+            inputOrder : 'drop-article-order',
+            lockedCheckboxSelector : 'lock-element',
+            checkSameClasses : ['orange', 'blue', 'yellow']
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="item draggable orange" data-id="1">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="1" src="https://loremflickr.com/200/200/london">
+            <h5>This is 1 title</h5>
+            <p>This is 1 content</p>
+        </div>
+        <div class="item draggable blue" data-id="2">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div><img alt="2" src="https://loremflickr.com/200/200/paris">
+            <h5>This is 2 title</h5>
+            <p>This is 2 content</p>
+        </div>
+        <div class="item draggable yellow" data-id="3">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div><img alt="3" src="https://loremflickr.com/200/200/belgrade">
+            <h5>This is 3 title</h5>
+            <p>This is 3 content</p>
+        </div>
+        <div class="item draggable orange" data-id="4">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="4" src="https://loremflickr.com/200/200/amsterdam">
+            <h5>This is 4 title</h5>
+            <p>This is 4 content</p>
+        </div>
+        <div class="item draggable blue" data-id="5">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div><img alt="5" src="https://loremflickr.com/200/200/athens">
+            <h5>This is 5 title</h5>
+            <p>This is 5 content</p>
+        </div>
+        <div class="item draggable yellow" data-id="6">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div><img alt="6" src="https://loremflickr.com/200/200/zagreb">
+            <h5>This is 6 title</h5>
+            <p>This is 6 content</p>
+        </div>
+        <div class="item draggable orange" data-id="7">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="7" src="https://loremflickr.com/200/200/rome">
+            <h5>This is 7 title</h5>
+            <p>This is 7 content</p>
+        </div>
+        <div class="item draggable blue" data-id="8">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="8" src="https://loremflickr.com/200/200/madrid">
+            <h5>This is 8 title</h5>
+            <p>This is 8 content</p>
+        </div>
+        <div class="item draggable yellow" data-id="9">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="9" src="https://loremflickr.com/200/200/lisabon">
+            <h5>This is 9 title</h5>
+            <p>This is 9 content</p>
+        </div>
+        <div class="item draggable orange" data-id="10">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="10" src="https://loremflickr.com/200/200/stockholm">
+            <h5>This is 10 title</h5>
+            <p>This is 10 content</p>
+        </div>
+        <div class="item draggable blue" data-id="11">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="11" src="https://loremflickr.com/200/200/copenhagen">
+            <h5>This is 11 title</h5>
+            <p>This is 11 content</p>
+        </div>
+        <div class="item draggable yellow" data-id="12">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="12" src="https://loremflickr.com/200/200/prague">
+            <h5>This is 12 title</h5>
+            <p>This is 12 content</p>
+        </div>
+        <div class="item draggable orange" data-id="13">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="13" src="https://loremflickr.com/200/200/bratislava">
+            <h5>This is 13 title</h5>
+            <p>This is 13 content</p>
+        </div>
+        <div class="item draggable blue" data-id="14">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="14" src="https://loremflickr.com/200/200/vienna">
+            <h5>This is 14 title</h5>
+            <p>This is 14 content</p>
+        </div>
+        <div class="item draggable yellow" data-id="15">
+            <div class="action-lock">
+                <input type="checkbox" name="" class="lock-element">
+            </div>
+            <img alt="15" src="https://loremflickr.com/200/200/sofia">
+            <h5>This is 15 title</h5>
+            <p>This is 15 content</p>
+        </div>
+        <input type="hidden" name="drop-article-order" id="drop-article-order">
+    </div>
+</body>
+</html>
